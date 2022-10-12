@@ -35,7 +35,12 @@ btnInput.addEventListener('click', function(){
   document.getElementById('output-km').innerHTML = kmDaPercorrere;
   document.querySelector('.km').value = '';
 
-  
+
+  etaPasseggero = document.querySelector('.age').value;
+  document.getElementById('output-eta').innerHTML = etaPasseggero;
+  document.querySelector('.age').value = '';
+
+
   prezzoViaggio = kmDaPercorrere * costoAlKm;
   scontoMinori = prezzoViaggio * minori;
   scontoOver = prezzoViaggio * over;
@@ -51,11 +56,6 @@ btnInput.addEventListener('click', function(){
    
 
 document.getElementById('output').innerHTML = `€ ${prezzoFinale.toFixed(2)}`;
-
-
-  etaPasseggero = document.querySelector('.age').value;
-  document.getElementById('output-eta').innerHTML = etaPasseggero;
-  document.querySelector('.age').value = '';
 });
 
 
