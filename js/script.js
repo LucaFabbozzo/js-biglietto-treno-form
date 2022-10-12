@@ -10,9 +10,9 @@
 // Solo una volta che la logica sarà funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 // Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
 
-
-const kmDaPercorrere = prompt('Quanti km faremo insieme?');
-const etaPasseggero = prompt('Quanti anni hai?');
+// const nome = prompt('Come ti chiami?');
+// const kmDaPercorrere = prompt('Quanti km faremo insieme?');
+// const etaPasseggero = prompt('Quanti anni hai?');
 const costoAlKm = 0.21;
 const minori = 0.2;
 const over = 0.4;
@@ -42,3 +42,7 @@ if (etaPasseggero < 18) {
 
 
 document.getElementById('output').innerHTML = msg;
+
+document.querySelector('.name').innerHTML = nome;
+document.querySelector('.km').innerHTML = kmDaPercorrere;
+document.querySelector('.age').innerHTML = etaPasseggero;
