@@ -18,32 +18,16 @@ const minori = 0.2;
 const over = 0.4;
 
 
-let msg, prezzoTotale, prezzoScontato;
-
-prezzoTotale = kmDaPercorrere * costoAlKm;
-
-msg = `Il prezzo del biglietto è di € ${prezzoTotale.toFixed(2)}.`;
-
-if (etaPasseggero < 18) {
-  prezzoScontato = prezzoTotale * (1 - minori);
-  msg += `
-  <br>
-  Essendo minorenne hai lo sconto del ${minori * 100}% quindi paghi solo € ${prezzoScontato.toFixed(2)}!
-`;
-} else if (etaPasseggero >= 65) {
-  prezzoScontato = prezzoTotale * (1 - over);
-  msg += `
-  <br>
-  Essendo Over65 hai lo sconto del ${over * 100}% quindi paghi solo € ${prezzoScontato.toFixed(2)}!
-`;
-}
-
-
-document.getElementById('output').innerHTML = msg;
+let prezzoFinale;
+let prezzoViaggio;
+let scontoMinori;
+let scontoOver;
 
 
 const btnInput = document.getElementById('btn-input');
+
 btnInput.addEventListener('click', function(){
+
   const name = document.querySelector('.name').value;
   document.getElementById('output-name').innerHTML = name;
   document.querySelector('.name').value = '';
@@ -52,7 +36,45 @@ btnInput.addEventListener('click', function(){
   document.getElementById('output-km').innerHTML = kmDaPercorrere;
   document.querySelector('.km').value = '';
 
+  
+  prezzoViaggio = kmDaPercorrere * costoAlKm;
+  scontoMinori = prezzoViaggio * minori;
+  scontoOver = prezzoViaggio * over;
+
+  //  inizio calcolo sconti
+
+  if (etaPasseggero < 18) {
+    prezzoFinale = prezzoViaggio - scontoMinori;
+   } else if (etaPasseggero > 65) {
+    prezzoFinale = prezzoViaggio - scontoOver;
+   } else 
+    prezzoFinale = prezzoViaggio;
+   
+
+document.getElementById('output').innerHTML = `€ ${prezzoFinale.toFixed(2)}`;
+
+
   etaPasseggero = document.querySelector('.age').value;
   document.getElementById('output-eta').innerHTML = etaPasseggero;
   document.querySelector('.age').value = '';
 });
+
+
+
+// refresh pagina con tasto annulla
+
+
+function refreshPage(){
+  window.location.reload();
+} 
+
+
+
+
+
+
+
+
+
+
+
