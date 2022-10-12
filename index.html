@@ -20,31 +20,51 @@
      <div class="d-flex justify-content-around align-items-cente text-center">
       <div class="left">
         <p>Nome Cognome</p>
-        <input class="name">
+        <input class="name" value="" placeholder="Nome Cognome">
       </div>
       <div class="center">
         <p>Km da Percorrere</p>
-        <input class="km">
+        <input class="km" value="" placeholder="km da percorrere">
       </div>
       <div class="right">
         <p>Fascia d'età</p>
-        <input class="age">
+        <input class="age" value="" placeholder="Età">
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <div class="btn input">
-        <a href="#">Genera</a>
-      </div>
-      <div class="btn reset">
-        <a href="#">Annulla</a>
-      </div>
+      <button id="btn-input" class="btn">Genera</button>
+      <button id="btn-reset" class="btn">Annulla</button>
     </div>
    </div>
   </div>
 
-  <div class="container pt-5">
-    <p id="output"></p>
+  <div class="bottom container">
+    <h2>Il tuo biglietto</h2>
+    <div class="box">
+      <h3>Dettaglio passeggeri</h3>
+      <div class="ticket d-flex">
+        <div class="left w-50">
+          <h4>Nome Passeggero</h4>
+          <p id="output-name"></p>
+        </div>
+        <div class="right d-flex justify-content-between w-100">
+          <div>
+            <p>Distanza Totale</p>
+            <p id="output-km"></p>
+          </div>
+          <div>
+            <p>Eta'</p>
+            <p id="output-eta"></p>
+          </div>
+          <div>
+            <p>Costo Biglietto</p>
+            <p id="output"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
 
   <script src="./js/script.js"></script>
 </body>
