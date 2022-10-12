@@ -11,13 +11,12 @@
 // Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
 
 
-let kmDaPercorrere;
-let etaPasseggero;
 const costoAlKm = 0.21;
 const minori = 0.2;
 const over = 0.4;
 
-
+let kmDaPercorrere;
+let etaPasseggero;
 let prezzoFinale;
 let prezzoViaggio;
 let scontoMinori;
@@ -45,7 +44,7 @@ btnInput.addEventListener('click', function(){
 
   if (etaPasseggero < 18) {
     prezzoFinale = prezzoViaggio - scontoMinori;
-   } else if (etaPasseggero > 65) {
+   } else if (etaPasseggero >= 65) {
     prezzoFinale = prezzoViaggio - scontoOver;
    } else 
     prezzoFinale = prezzoViaggio;
