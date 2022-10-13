@@ -17,9 +17,14 @@ h3 {
   font-weight: 700;
   color: black;
   font-size: 1.2rem;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  width: 35%;
 }
 
+h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
 
 
 button.btn {
@@ -36,7 +41,7 @@ button.btn:hover {
 
 
 .top .box {
-  width: 60%;
+  width: 70%;
   background-color: #e8e5e5;
   margin: 30px auto;
   padding: 30px;
@@ -49,7 +54,7 @@ button.btn:hover {
   border-radius: 10px;
   padding: 4px 10px;
   margin-bottom: 35px;
-  width: 80%;
+  width: 90%;
 }
 
 .top .box input:focus {
@@ -63,9 +68,10 @@ button.btn:hover {
 
 
 .bottom .box {
-  width: 60%; 
+  width: 70%; 
   background-color: #e8e5e5;
   margin: 30px auto;
-  padding: 30px;
+  padding: 15px 20px;
+  padding-bottom: 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
